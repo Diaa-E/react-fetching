@@ -18,11 +18,13 @@ export default function useFetchData({url, method})
             .then(jsonData => {
 
                 setData(jsonData);
+                setError(null);
             })
             .catch(error => {
 
                 console.error(error);
                 setError(error);
+                setData(null);
             })
             .finally(() => setLoading(false))
     }, []);
