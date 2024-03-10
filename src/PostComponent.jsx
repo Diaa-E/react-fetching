@@ -1,8 +1,8 @@
-import useFetchData from "./useFetchData";
+import useFetchDataAsync from "./useFetchDataAsync";
 
 export default function PostComponent({})
 {
-    const {loading, data, error} = useFetchData({url: "https://jsonplaceholder.typicode.com/posts", method: "GET"});
+    const {loading, data, error} = useFetchDataAsync({url: "https://jsonplaceholder.typicode.com/posts", method: "GET"});
 
     if (error) return <p>Error loading post</p>
 
